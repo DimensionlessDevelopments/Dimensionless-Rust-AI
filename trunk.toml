@@ -1,0 +1,17 @@
+[build]
+target = "index.html"
+dist = "dist"
+
+[watch]
+# Paths to watch for changes
+watch = ["src", "style"]
+# Files to ignore
+ignore = ["target", "dist"]
+
+[serve]
+# The addresses to serve on
+addresses = ["127.0.0.1"]
+# The port to serve on
+port = 8080
+# Open the browser
+open = false

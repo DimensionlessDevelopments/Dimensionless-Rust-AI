@@ -1,0 +1,66 @@
+[package]
+name = "_dimensionless_rust_ai_research_agent"
+version = "0.1.0"
+edition = "2021"
+description = "A production-ready AI research agent built with Rig framework"
+authors = ["DimensionlessDevelopments <contactus@dimensionlessdevelopments.com>"]
+license = "MIT"
+readme = "README.md"
+keywords = ["ai", "agent", "llm", "research", "rust"]
+categories = ["command-line-utilities", "science"]
+
+[lib]
+name = "_dimensionless_rust_ai_research_agent"
+crate-type = ["cdylib", "rlib"]
+
+# Only build the binary for non-WASM targets
+[[bin]]
+name = "ai-research-agent"
+path = "src/main.rs"
+required-features = ["server"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+default = ["server"]
+server = []
+
+[dependencies]
+# =============================================================================
+# SHARED DEPENDENCIES (both lib and bin)
+# =============================================================================
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+anyhow = "1"
+thiserror = "2"
+tracing = "0.1"
+
+# =============================================================================
+# FRONTEND ONLY DEPENDENCIES (WASM)
+# =============================================================================
+leptos = { version = "0.6", features = ["csr"] }
+leptos_meta = { version = "0.6", features = ["csr"] }
+leptos_router = { version = "0.6", features = ["csr"] }
+wasm-bindgen = "0.2"
+web-sys = { version = "0.3", features = ["Window", "Location"] }
+gloo-net = { version = "0.5", features = ["websocket"] }
+console_error_panic_hook = "0.1"
+futures = "0.3"
+
+# =============================================================================
+# BACKEND ONLY DEPENDENCIES (not for WASM)
+# =============================================================================
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+rig-core = { version = "0.27", features = ["derive"] }
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.12", features = ["json"] }
+duckduckgo_search = "0.1"
+axum = { version = "0.7", features = ["ws"] }
+tower = "0.4"
+tower-http = { version = "0.5", features = ["fs", "cors"] }
+tokio-stream = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+clap = { version = "4", features = ["derive", "env"] }
+dotenvy = "0.15"
+async-trait = "0.1"
+urlencoding = "2.1"

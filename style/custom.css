@@ -1,0 +1,59 @@
+/* Custom styles */
+
+body {
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.input-field:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.5);
+}
+
+/* Fix for orange-500 if CDN doesn't have it */
+.bg-orange-500 {
+  background-color: rgb(249, 115, 22);
+}
+
+.text-orange-500 {
+  color: rgb(249, 115, 22);
+}
+
+.hover\:text-orange-500:hover {
+  color: rgb(249, 115, 22);
+}
+
+.bg-orange-700 {
+  background-color: rgb(194, 65, 12);
+}
+
+.hover\:bg-orange-500:hover {
+  background-color: rgb(249, 115, 22);
+}
+
+.hover\:bg-orange-700:hover {
+  background-color: rgb(194, 65, 12);
+}
+
+.border-orange-500 {
+  border-color: rgb(249, 115, 22);
+}
+
+.hover\:border-orange-500:hover {
+  border-color: rgb(249, 115, 22);
+}
+
+/* Word wrapping for chat messages */
+.break-words {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.overflow-wrap {
+  white-space: pre-wrap;
+}
+
+/* Z-index utilities */
+.z-50 {
+  z-index: 50;
+}
