@@ -118,7 +118,7 @@ ollama list
 ### Step 3: Clone and Build the Project (5-10 minutes)
 
 ```bash
-# Clone this repository
+# Clone this repository git clone https://github.com/DimensionlessDevelopments/Dimensionless-Rust-AI-.git
 git clone this repositry
 cd Dimensionless-Rust-AI-
 
