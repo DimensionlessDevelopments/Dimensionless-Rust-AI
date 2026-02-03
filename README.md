@@ -652,5 +652,8 @@ MIT License - feel free to use this for learning and building!
 
 This project is designed as a learning resource. I have made a lot of comments that explain the code & the rust concepts needed to be understood to implement the code to work. Check the code comments for detailed explanations of each concept! 
 
-## Made by Dimensionless Developments. Head to our website https://www.dimensionlessdevelopments.com. email: contact@dimensionlessdevelopments.com
+## Contact
+**Made by Dimensionless Developments**
+**Head to our website https://www.dimensionlessdevelopments.com. email: contact@dimensionlessdevelopments.com**
+
 
